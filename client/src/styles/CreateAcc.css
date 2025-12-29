@@ -1,0 +1,106 @@
+/*  Page Container  */
+.create-account-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fdfbfb, #ebedfa);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeInPage 0.8s ease forwards;
+}
+
+/*  Heading */
+.create-account-page h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6366f1, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  animation: popIn 0.8s ease forwards;
+}
+
+/*  Form Styles  */
+.create-account-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.create-account-page label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.create-account-page input {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.create-account-page input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  outline: none;
+}
+
+/*  Submit Button  */
+.create-account-page button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.7rem 1.8rem;
+  background: linear-gradient(90deg, #6366f1, #2563eb);
+  color: white;
+  font-weight: 600;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.create-account-page button[type="submit"]:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.4);
+}
+
+/*  Animations */
+@keyframes fadeInPage {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/*  Responsive  */
+@media (max-width: 768px) {
+  .create-account-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .create-account-page form {
+    padding: 1.5rem 2rem;
+  }
+}

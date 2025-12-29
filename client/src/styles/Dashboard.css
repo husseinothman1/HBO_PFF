@@ -1,0 +1,75 @@
+/*  Dashboard Page Container  */
+.dashboard-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4ff, #e9f7ef);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeInPage 0.8s ease forwards;
+}
+
+/*  Heading  */
+.dashboard-page h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #2563eb, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  animation: popIn 0.8s ease forwards;
+}
+
+/*  Paragraph  */
+.dashboard-page p {
+  font-size: 1.2rem;
+  color: #4b5563;
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/*  Dashboard Card Example  */
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  margin: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.25);
+}
+
+/*  Animations  */
+@keyframes fadeInPage {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/*  Responsive  */
+@media (max-width: 768px) {
+  .dashboard-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .dashboard-page p {
+    font-size: 1.1rem;
+  }
+}

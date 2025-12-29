@@ -1,0 +1,182 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #fdfbfb, #ebedfa);
+  color: #1f2937;
+  line-height: 1.6;
+  transition: background 0.5s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111827;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Smooth animations for hover */
+* {
+  transition: all 0.3s ease;
+}
+/*  Buttons  */
+.btn-primary {
+  background: linear-gradient(90deg, #6366f1, #2563eb);
+  color: white;
+  padding: 0.7rem 1.7rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #4f46e5, #1d4ed8);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #6366f1;
+  padding: 0.7rem 1.7rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  border: 2px solid #6366f1;
+  position: relative;
+}
+
+.btn-outline:hover {
+  background: #6366f1;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+/*  Brand Cards  */
+.brand-card {
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.25);
+  border-color: #6366f1;
+}
+
+.brand-card .text-blue-600 {
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.brand-card:hover .text-blue-600 {
+  transform: translateX(6px);
+}
+
+/*  Product Cards */
+.product-card-home {
+  background: linear-gradient(145deg, #ffffff, #f9fafb);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card-home:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.25);
+}
+
+.product-img-home {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: #6366f1;
+  border-radius: 0.75rem;
+}
+
+/*  Shadow boxes (delivery/support)  */
+.shadow {
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.25);
+}
+
+/*  Typography tweaks */
+h1 {
+  line-height: 1.2;
+  background: linear-gradient(90deg, #6366f1, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h4 {
+  color: #111827;
+}
+
+/*  Grid tweaks  */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid.md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid.sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid.sm\\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid.md\\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

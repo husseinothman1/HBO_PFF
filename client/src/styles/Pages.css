@@ -1,0 +1,61 @@
+/* Pages.css */
+
+.page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9fafb; /* light background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111827; /* dark text */
+  line-height: 1.6;
+}
+
+.page h1 {
+  font-size: 2rem;
+  color: #1f2937; /* slightly darker heading */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.page p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.page a {
+  color: #3b82f6; /* blue links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.page a:hover {
+  color: #1e40af; /* darker blue on hover */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.contact-info span {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .page h1 {
+    font-size: 1.7rem;
+  }
+
+  .page p {
+    font-size: 1rem;
+  }
+}

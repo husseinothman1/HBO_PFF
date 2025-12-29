@@ -1,0 +1,79 @@
+/*  Maintenance Appreciation Page  */
+.maintenance-appreciation {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e0f7fa, #d1c4e9);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeInPage 0.8s ease forwards;
+  border-radius: 1rem;
+}
+
+/*  Heading */
+.maintenance-appreciation h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #10b981, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  animation: popIn 0.8s ease forwards;
+}
+
+/*  Paragraph  */
+.maintenance-appreciation p {
+  font-size: 1.2rem;
+  color: #4b5563;
+  max-width: 500px;
+  line-height: 1.6;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/*  Optional Button  */
+.maintenance-appreciation .btn-home {
+  margin-top: 1.5rem;
+  padding: 0.7rem 2rem;
+  background: linear-gradient(90deg, #6366f1, #2563eb);
+  color: white;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.maintenance-appreciation .btn-home:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.4);
+}
+
+/*  Animations  */
+@keyframes fadeInPage {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/*  Responsive  */
+@media (max-width: 768px) {
+  .maintenance-appreciation h1 {
+    font-size: 2.2rem;
+  }
+
+  .maintenance-appreciation p {
+    font-size: 1.1rem;
+  }
+}
