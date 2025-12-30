@@ -2,27 +2,21 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-const authRoutes = require("./routes/auth");
-const productRoutes = require("./routes/products");
-const orderRoutes = require("./routes/orders");
-const maintenanceRoutes = require("./routes/maintenance");
-const dashboardRoutes = require("./routes/dashboard");
-
 const app = express();
 
+// Middlewares
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/auth", authRoutes);
-app.use("/api/products", productRoutes);
-app.use("/api/orders", orderRoutes);
-app.use("/api/maintenance", maintenanceRoutes);
-app.use("/api/dashboard", dashboardRoutes);
-app.use("/uploads", express.static("uploads"));
+// Routes
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/products", require("./routes/products"));
+app.use("/api/orders", require("./routes/orders"));
+app.use("/api/maintenance", require("./routes/maintenance"));
+app.use("/api/dashboard", require("./routes/dashboard"));
 
-
-
-const PORT = process.env.PORT || 5000;
+// ✅ THIS PART MUST BE AT THE BOTTOM
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
